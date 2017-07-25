@@ -35,6 +35,7 @@ PubSubClient client(server, 1883, NULL, wifiClient);
 #define DHTPIN 5 // pino que estamos conectado
 #define DHTTYPE DHT11 // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
+float umi;
 float temp;
 
 // functions
