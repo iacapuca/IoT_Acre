@@ -8,18 +8,9 @@
 #include <PubSubClient.h>
 //#include <ArduinoJson.h>
 #include <DHT.h>
-#include "MQ135.h"
+#include <MQ135.h>
+#include "config.h"
 
-
-//-------- Wi-Fi -----------
-const char* ssid = "";
-const char* password = "";
-
-//-------- MQTT ------------
-#define ORG "2kcheh"
-#define DEVICE_TYPE "nodemcu"
-#define DEVICE_ID "" // MAC ADDRESS
-#define TOKEN "" // TOKEN DO BLUEMIX
 
 char server[] = ORG ".messaging.internetofthings.ibmcloud.com";
 char topic[] = "iot-2/evt/status/fmt/json";
@@ -31,33 +22,6 @@ WiFiClient wifiClient;
 PubSubClient client(server, 1883, NULL, wifiClient);
 
 //-------- DEBUG ONLY -------
-
-//-------- GEOLOCATION ------
-float lat;
-float lng;
-
-//-------- DHT11 ------------
-#define DHTPIN 5 // pino que estamos conectado
-#define DHTTYPE DHT11 // DHT 11
-DHT dht(DHTPIN, DHTTYPE);
-float umi;
-float temp;
-
-//-------- PIR --------------
-#define PIRPIN 16
-int pirValue;
-
-//-------- CHUVA ------------
-#define RAINPIN 4
-int rainValue;
-
-//-------- MQ135 ------------
-#define ANALOGPIN A0
-MQ135 gasSensor = MQ135(ANALOGPIN);
-
-//-------- MQ2 --------------
-#define MQ2PIN 2
-int mq2Value;
 
 // functions
 void getData();
