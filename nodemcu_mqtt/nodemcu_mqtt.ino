@@ -24,12 +24,7 @@ PubSubClient client(server, 1883, NULL, wifiClient);
 //-------- DEBUG ONLY -------
 
 // functions
-void getData();
-void tempData();
-void pirData();
-void rainData();
-void mq135Data();
-void mq2Data();
+
 
 //------- void setup() ------
 void setup(){
