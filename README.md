@@ -28,3 +28,20 @@ Basta clonar o repositorio e compilar o .ino aprorpiado para seu dispositivo.
 Para consumir a API, voce devera obedecer as instruções abaixo:
 
 [http://iot-acre.mybluemix.net/api/acre1] [GET]
+[http://iot-acre.mybluemix.net/api/acre2] [GET]
+[http://iot-acre.mybluemix.net/api/acre3] [GET]
+
+### JSON
+
+```json
+{
+   _id:string,
+   _rev:string,
+   Name:string,
+   temp:integer,
+   umi:integer,
+   pir:!boolean,
+   chuva:!boolean,
+   timestamp: integer
+ },
+```
